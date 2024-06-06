@@ -1,0 +1,35 @@
+﻿
+
+@model IEnumerable<HimalayanTest.Models.Student>
+
+<h1>This is the Student Page</h1>
+<h2>Total Students: @Model.Count() </h2>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Father Name</th>
+            <th>Mother Name</th>
+            <th>Parent Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.StudentID</td>
+                <td>@item.Fullname</td>
+                <td>@item.Email</td>
+                <td>@item.ContactNo</td>
+                <td>@item.FatherName</td>
+                <td>@item.MotherName</td>
+                <td>@item.ParentPhone</td>
+            </tr>
+        }
+    </tbody>
+</table>

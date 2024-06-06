@@ -1,0 +1,26 @@
+﻿
+@model IEnumerable<HimalayanTest.Models.UserGroup>
+
+<h1>This is the UserGroup Page</h1>
+<h2>Total UserGroup: @Model.Count() </h2>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>User Group ID</th>
+            <th>User Group Name</th>
+            <th>User Group Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.UserGroupId</td>
+                <td>@item.UserGroupName</td>
+                <td>@item.UserGroupCode</td>
+            </tr>
+        }
+    </tbody>
+</table>
